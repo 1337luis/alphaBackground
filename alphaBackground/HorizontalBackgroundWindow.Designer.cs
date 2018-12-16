@@ -1,16 +1,16 @@
 ﻿namespace alphaBackground
 {
-    partial class VerticalBackgroundWindow
+    partial class HorizontalBackgroundWindow
     {
         /// <summary>
-        /// Variable del diseñador necesaria.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpiar los recursos que se estén usando.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,26 +20,20 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de Windows Forms
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerticalBackgroundWindow));
-            this.resultPictureBox = new System.Windows.Forms.PictureBox();
-            this.resultGroupBox = new System.Windows.Forms.GroupBox();
-            this.saveButton = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HorizontalBackgroundWindow));
             this.optionsGroupBox = new System.Windows.Forms.GroupBox();
             this.relativeGapGroupBox = new System.Windows.Forms.GroupBox();
             this.percentLabel3 = new System.Windows.Forms.Label();
             this.relativeGapSelector = new System.Windows.Forms.NumericUpDown();
             this.plusLabel = new System.Windows.Forms.Label();
-            this.previewGroupBox = new System.Windows.Forms.GroupBox();
-            this.previewPanel = new System.Windows.Forms.Panel();
-            this.renderButton = new System.Windows.Forms.Button();
             this.horizontalGroupBox = new System.Windows.Forms.GroupBox();
             this.horizontalGapSelector = new System.Windows.Forms.NumericUpDown();
             this.hGapLabel = new System.Windows.Forms.Label();
@@ -60,12 +54,15 @@
             this.pictureLocationTextBox = new System.Windows.Forms.TextBox();
             this.resolutionGroupBox = new System.Windows.Forms.GroupBox();
             this.resolutionComboBox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).BeginInit();
-            this.resultGroupBox.SuspendLayout();
+            this.previewGroupBox = new System.Windows.Forms.GroupBox();
+            this.previewPanel = new System.Windows.Forms.Panel();
+            this.renderButton = new System.Windows.Forms.Button();
+            this.resultGroupBox = new System.Windows.Forms.GroupBox();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.resultPictureBox = new System.Windows.Forms.PictureBox();
             this.optionsGroupBox.SuspendLayout();
             this.relativeGapGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.relativeGapSelector)).BeginInit();
-            this.previewGroupBox.SuspendLayout();
             this.horizontalGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalGapSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalCountSelector)).BeginInit();
@@ -75,43 +72,14 @@
             this.colorGroupBox.SuspendLayout();
             this.pictureGroupBox.SuspendLayout();
             this.resolutionGroupBox.SuspendLayout();
+            this.previewGroupBox.SuspendLayout();
+            this.resultGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // resultPictureBox
-            // 
-            this.resultPictureBox.BackColor = System.Drawing.Color.DarkCyan;
-            this.resultPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.resultPictureBox.Location = new System.Drawing.Point(6, 19);
-            this.resultPictureBox.Name = "resultPictureBox";
-            this.resultPictureBox.Size = new System.Drawing.Size(270, 480);
-            this.resultPictureBox.TabIndex = 0;
-            this.resultPictureBox.TabStop = false;
-            // 
-            // resultGroupBox
-            // 
-            this.resultGroupBox.Controls.Add(this.saveButton);
-            this.resultGroupBox.Controls.Add(this.resultPictureBox);
-            this.resultGroupBox.Location = new System.Drawing.Point(295, 12);
-            this.resultGroupBox.Name = "resultGroupBox";
-            this.resultGroupBox.Size = new System.Drawing.Size(290, 537);
-            this.resultGroupBox.TabIndex = 1;
-            this.resultGroupBox.TabStop = false;
-            this.resultGroupBox.Text = "Resultado";
-            // 
-            // saveButton
-            // 
-            this.saveButton.Location = new System.Drawing.Point(6, 508);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(270, 23);
-            this.saveButton.TabIndex = 1;
-            this.saveButton.Text = "Guardar";
-            this.saveButton.UseVisualStyleBackColor = true;
             // 
             // optionsGroupBox
             // 
             this.optionsGroupBox.Controls.Add(this.relativeGapGroupBox);
-            this.optionsGroupBox.Controls.Add(this.previewGroupBox);
-            this.optionsGroupBox.Controls.Add(this.renderButton);
             this.optionsGroupBox.Controls.Add(this.horizontalGroupBox);
             this.optionsGroupBox.Controls.Add(this.verticalGroupBox);
             this.optionsGroupBox.Controls.Add(this.colorGroupBox);
@@ -119,8 +87,8 @@
             this.optionsGroupBox.Controls.Add(this.resolutionGroupBox);
             this.optionsGroupBox.Location = new System.Drawing.Point(12, 12);
             this.optionsGroupBox.Name = "optionsGroupBox";
-            this.optionsGroupBox.Size = new System.Drawing.Size(277, 537);
-            this.optionsGroupBox.TabIndex = 2;
+            this.optionsGroupBox.Size = new System.Drawing.Size(277, 475);
+            this.optionsGroupBox.TabIndex = 4;
             this.optionsGroupBox.TabStop = false;
             this.optionsGroupBox.Text = "Opciones";
             // 
@@ -131,7 +99,7 @@
             this.relativeGapGroupBox.Controls.Add(this.plusLabel);
             this.relativeGapGroupBox.Location = new System.Drawing.Point(6, 422);
             this.relativeGapGroupBox.Name = "relativeGapGroupBox";
-            this.relativeGapGroupBox.Size = new System.Drawing.Size(174, 46);
+            this.relativeGapGroupBox.Size = new System.Drawing.Size(265, 46);
             this.relativeGapGroupBox.TabIndex = 2;
             this.relativeGapGroupBox.TabStop = false;
             this.relativeGapGroupBox.Text = "Separación Relativa";
@@ -140,7 +108,7 @@
             // 
             this.percentLabel3.AutoSize = true;
             this.percentLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.percentLabel3.Location = new System.Drawing.Point(122, 18);
+            this.percentLabel3.Location = new System.Drawing.Point(167, 18);
             this.percentLabel3.Name = "percentLabel3";
             this.percentLabel3.Size = new System.Drawing.Size(18, 15);
             this.percentLabel3.TabIndex = 3;
@@ -148,7 +116,7 @@
             // 
             // relativeGapSelector
             // 
-            this.relativeGapSelector.Location = new System.Drawing.Point(50, 16);
+            this.relativeGapSelector.Location = new System.Drawing.Point(95, 16);
             this.relativeGapSelector.Name = "relativeGapSelector";
             this.relativeGapSelector.Size = new System.Drawing.Size(70, 20);
             this.relativeGapSelector.TabIndex = 2;
@@ -163,41 +131,11 @@
             // 
             this.plusLabel.AutoSize = true;
             this.plusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusLabel.Location = new System.Drawing.Point(34, 19);
+            this.plusLabel.Location = new System.Drawing.Point(79, 19);
             this.plusLabel.Name = "plusLabel";
             this.plusLabel.Size = new System.Drawing.Size(14, 15);
             this.plusLabel.TabIndex = 0;
             this.plusLabel.Text = "+";
-            // 
-            // previewGroupBox
-            // 
-            this.previewGroupBox.Controls.Add(this.previewPanel);
-            this.previewGroupBox.Location = new System.Drawing.Point(186, 422);
-            this.previewGroupBox.Name = "previewGroupBox";
-            this.previewGroupBox.Size = new System.Drawing.Size(85, 109);
-            this.previewGroupBox.TabIndex = 4;
-            this.previewGroupBox.TabStop = false;
-            this.previewGroupBox.Text = "Vista Previa";
-            // 
-            // previewPanel
-            // 
-            this.previewPanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.previewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.previewPanel.Location = new System.Drawing.Point(18, 18);
-            this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(48, 85);
-            this.previewPanel.TabIndex = 2;
-            // 
-            // renderButton
-            // 
-            this.renderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.renderButton.Location = new System.Drawing.Point(6, 474);
-            this.renderButton.Name = "renderButton";
-            this.renderButton.Size = new System.Drawing.Size(174, 57);
-            this.renderButton.TabIndex = 2;
-            this.renderButton.Text = "Generar";
-            this.renderButton.UseVisualStyleBackColor = true;
-            this.renderButton.Click += new System.EventHandler(this.renderButton_Click);
             // 
             // horizontalGroupBox
             // 
@@ -401,27 +339,86 @@
             this.resolutionComboBox.Size = new System.Drawing.Size(253, 21);
             this.resolutionComboBox.TabIndex = 1;
             // 
-            // VerticalBackgroundWindow
+            // previewGroupBox
+            // 
+            this.previewGroupBox.Controls.Add(this.previewPanel);
+            this.previewGroupBox.Location = new System.Drawing.Point(295, 410);
+            this.previewGroupBox.Name = "previewGroupBox";
+            this.previewGroupBox.Size = new System.Drawing.Size(130, 77);
+            this.previewGroupBox.TabIndex = 4;
+            this.previewGroupBox.TabStop = false;
+            this.previewGroupBox.Text = "Vista Previa";
+            // 
+            // previewPanel
+            // 
+            this.previewPanel.BackColor = System.Drawing.Color.DarkCyan;
+            this.previewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.previewPanel.Location = new System.Drawing.Point(18, 18);
+            this.previewPanel.Name = "previewPanel";
+            this.previewPanel.Size = new System.Drawing.Size(85, 48);
+            this.previewPanel.TabIndex = 2;
+            // 
+            // renderButton
+            // 
+            this.renderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.renderButton.Location = new System.Drawing.Point(431, 410);
+            this.renderButton.Name = "renderButton";
+            this.renderButton.Size = new System.Drawing.Size(357, 77);
+            this.renderButton.TabIndex = 2;
+            this.renderButton.Text = "Generar";
+            this.renderButton.UseVisualStyleBackColor = true;
+            this.renderButton.Click += new System.EventHandler(this.renderButton_Click);
+            // 
+            // resultGroupBox
+            // 
+            this.resultGroupBox.Controls.Add(this.saveButton);
+            this.resultGroupBox.Controls.Add(this.resultPictureBox);
+            this.resultGroupBox.Location = new System.Drawing.Point(295, 12);
+            this.resultGroupBox.Name = "resultGroupBox";
+            this.resultGroupBox.Size = new System.Drawing.Size(493, 396);
+            this.resultGroupBox.TabIndex = 3;
+            this.resultGroupBox.TabStop = false;
+            this.resultGroupBox.Text = "Resultado";
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(6, 19);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(480, 95);
+            this.saveButton.TabIndex = 1;
+            this.saveButton.Text = "Guardar";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
+            // resultPictureBox
+            // 
+            this.resultPictureBox.BackColor = System.Drawing.Color.DarkCyan;
+            this.resultPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.resultPictureBox.Location = new System.Drawing.Point(6, 120);
+            this.resultPictureBox.Name = "resultPictureBox";
+            this.resultPictureBox.Size = new System.Drawing.Size(480, 270);
+            this.resultPictureBox.TabIndex = 0;
+            this.resultPictureBox.TabStop = false;
+            // 
+            // HorizontalBackgroundWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 555);
+            this.ClientSize = new System.Drawing.Size(794, 490);
             this.Controls.Add(this.optionsGroupBox);
+            this.Controls.Add(this.renderButton);
+            this.Controls.Add(this.previewGroupBox);
             this.Controls.Add(this.resultGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "VerticalBackgroundWindow";
-            this.Text = "alphaBackground";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VerticalBackgroundWindow_FormClosed);
-            this.Load += new System.EventHandler(this.VerticalBackgroundWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).EndInit();
-            this.resultGroupBox.ResumeLayout(false);
+            this.Name = "HorizontalBackgroundWindow";
+            this.Text = "HorizontalBackgroundWindow";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HorizontalBackgroundWindow_FormClosed);
+            this.Load += new System.EventHandler(this.HorizontalBackgroundWindow_Load);
             this.optionsGroupBox.ResumeLayout(false);
             this.relativeGapGroupBox.ResumeLayout(false);
             this.relativeGapGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.relativeGapSelector)).EndInit();
-            this.previewGroupBox.ResumeLayout(false);
             this.horizontalGroupBox.ResumeLayout(false);
             this.horizontalGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalGapSelector)).EndInit();
@@ -434,43 +431,45 @@
             this.pictureGroupBox.ResumeLayout(false);
             this.pictureGroupBox.PerformLayout();
             this.resolutionGroupBox.ResumeLayout(false);
+            this.previewGroupBox.ResumeLayout(false);
+            this.resultGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox resultPictureBox;
-        private System.Windows.Forms.GroupBox resultGroupBox;
-        private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.GroupBox optionsGroupBox;
-        private System.Windows.Forms.GroupBox resolutionGroupBox;
-        private System.Windows.Forms.GroupBox pictureGroupBox;
-        private System.Windows.Forms.Button loadPictureButton;
-        private System.Windows.Forms.TextBox pictureLocationTextBox;
-        private System.Windows.Forms.ComboBox resolutionComboBox;
-        private System.Windows.Forms.GroupBox horizontalGroupBox;
-        private System.Windows.Forms.GroupBox verticalGroupBox;
-        private System.Windows.Forms.GroupBox colorGroupBox;
-        private System.Windows.Forms.Panel colorPanel;
+        private System.Windows.Forms.GroupBox relativeGapGroupBox;
+        private System.Windows.Forms.Label percentLabel3;
+        private System.Windows.Forms.NumericUpDown relativeGapSelector;
+        private System.Windows.Forms.Label plusLabel;
         private System.Windows.Forms.GroupBox previewGroupBox;
+        private System.Windows.Forms.Panel previewPanel;
         private System.Windows.Forms.Button renderButton;
-        private System.Windows.Forms.Button deleteBackgroundButton;
-        private System.Windows.Forms.NumericUpDown verticalGapSelector;
-        private System.Windows.Forms.Label vGapLabel;
-        private System.Windows.Forms.Label percentLabel1;
-        private System.Windows.Forms.NumericUpDown verticalCountSelector;
-        private System.Windows.Forms.Label vqLabel;
+        private System.Windows.Forms.GroupBox horizontalGroupBox;
         private System.Windows.Forms.NumericUpDown horizontalGapSelector;
         private System.Windows.Forms.Label hGapLabel;
         private System.Windows.Forms.Label percentLabel2;
         private System.Windows.Forms.NumericUpDown horizontalCountSelector;
         private System.Windows.Forms.Label hqLabel;
-        private System.Windows.Forms.Panel previewPanel;
-        private System.Windows.Forms.GroupBox relativeGapGroupBox;
-        private System.Windows.Forms.Label percentLabel3;
-        private System.Windows.Forms.NumericUpDown relativeGapSelector;
-        private System.Windows.Forms.Label plusLabel;
+        private System.Windows.Forms.GroupBox verticalGroupBox;
+        private System.Windows.Forms.NumericUpDown verticalGapSelector;
+        private System.Windows.Forms.Label vGapLabel;
+        private System.Windows.Forms.Label percentLabel1;
+        private System.Windows.Forms.NumericUpDown verticalCountSelector;
+        private System.Windows.Forms.Label vqLabel;
+        private System.Windows.Forms.GroupBox colorGroupBox;
+        private System.Windows.Forms.Panel colorPanel;
+        private System.Windows.Forms.GroupBox pictureGroupBox;
+        private System.Windows.Forms.Button deleteBackgroundButton;
+        private System.Windows.Forms.Button loadPictureButton;
+        private System.Windows.Forms.TextBox pictureLocationTextBox;
+        private System.Windows.Forms.GroupBox resolutionGroupBox;
+        private System.Windows.Forms.ComboBox resolutionComboBox;
+        private System.Windows.Forms.GroupBox resultGroupBox;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.PictureBox resultPictureBox;
     }
 }
-

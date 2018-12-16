@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace alphaBackground
 {
-    public partial class VerticalBackgroundWindow : Form
+    public partial class HorizontalBackgroundWindow : Form
     {
         private Form parent;
-        public VerticalBackgroundWindow(Form sender)
+        public HorizontalBackgroundWindow(Form sender)
         {
             InitializeComponent();
             parent = sender;
@@ -25,15 +25,21 @@ namespace alphaBackground
 
         }
 
-        private void VerticalBackgroundWindow_FormClosed(object sender, FormClosedEventArgs e)
+        private void HorizontalBackgroundWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
             parent.Close();
         }
+
+        private void HorizontalBackgroundWindow_Load(object sender, EventArgs e)
+        {
+            resolutionComboBox.SelectedIndex = 3;
+        }
+
         private void setLang()
         {
-            string[] lang = ( 
-                Properties.Settings.Default.LANG == "ES" ? 
-                Properties.Resources.SpanishCreate.Split(',') : 
+            string[] lang = (
+                Properties.Settings.Default.LANG == "ES" ?
+                Properties.Resources.SpanishCreate.Split(',') :
                 Properties.Resources.EnglishCreate.Split(',')
                 );
             optionsGroupBox.Text = lang[0];
@@ -53,11 +59,6 @@ namespace alphaBackground
             previewGroupBox.Text = lang[12];
             resultGroupBox.Text = lang[13];
             saveButton.Text = lang[14];
-        }
-
-        private void VerticalBackgroundWindow_Load(object sender, EventArgs e)
-        {
-            resolutionComboBox.SelectedIndex = 3;
         }
     }
 }

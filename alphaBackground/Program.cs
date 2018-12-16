@@ -16,7 +16,7 @@ namespace alphaBackground
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VerticalBackgroundWindow());
+            Application.Run(new MainMenu());
         }
     }
 }
