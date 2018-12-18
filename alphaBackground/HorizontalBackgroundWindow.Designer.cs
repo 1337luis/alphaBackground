@@ -158,6 +158,11 @@
             this.horizontalGapSelector.Size = new System.Drawing.Size(135, 20);
             this.horizontalGapSelector.TabIndex = 9;
             this.horizontalGapSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.horizontalGapSelector.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
             // 
             // hGapLabel
             // 
@@ -185,6 +190,11 @@
             this.horizontalCountSelector.Size = new System.Drawing.Size(159, 20);
             this.horizontalCountSelector.TabIndex = 6;
             this.horizontalCountSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.horizontalCountSelector.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // hqLabel
             // 
@@ -216,6 +226,11 @@
             this.verticalGapSelector.Size = new System.Drawing.Size(135, 20);
             this.verticalGapSelector.TabIndex = 4;
             this.verticalGapSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verticalGapSelector.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             // 
             // vGapLabel
             // 
@@ -239,10 +254,20 @@
             // verticalCountSelector
             // 
             this.verticalCountSelector.Location = new System.Drawing.Point(100, 19);
+            this.verticalCountSelector.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.verticalCountSelector.Name = "verticalCountSelector";
             this.verticalCountSelector.Size = new System.Drawing.Size(159, 20);
             this.verticalCountSelector.TabIndex = 2;
             this.verticalCountSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verticalCountSelector.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // vqLabel
             // 
@@ -271,6 +296,7 @@
             this.colorPanel.Name = "colorPanel";
             this.colorPanel.Size = new System.Drawing.Size(253, 27);
             this.colorPanel.TabIndex = 3;
+            this.colorPanel.Click += new System.EventHandler(this.colorPanel_Click);
             // 
             // pictureGroupBox
             // 
@@ -292,6 +318,7 @@
             this.deleteBackgroundButton.TabIndex = 4;
             this.deleteBackgroundButton.Text = "Eliminar Fondo Blanco";
             this.deleteBackgroundButton.UseVisualStyleBackColor = true;
+            this.deleteBackgroundButton.Click += new System.EventHandler(this.deleteBackgroundButton_Click);
             // 
             // loadPictureButton
             // 
@@ -301,6 +328,7 @@
             this.loadPictureButton.TabIndex = 3;
             this.loadPictureButton.Text = "Cargar";
             this.loadPictureButton.UseVisualStyleBackColor = true;
+            this.loadPictureButton.Click += new System.EventHandler(this.loadPictureButton_Click);
             // 
             // pictureLocationTextBox
             // 

@@ -333,6 +333,7 @@
             this.colorPanel.Name = "colorPanel";
             this.colorPanel.Size = new System.Drawing.Size(253, 27);
             this.colorPanel.TabIndex = 3;
+            this.colorPanel.Click += new System.EventHandler(this.colorPanel_Click);
             // 
             // pictureGroupBox
             // 
@@ -363,6 +364,7 @@
             this.loadPictureButton.TabIndex = 3;
             this.loadPictureButton.Text = "Cargar";
             this.loadPictureButton.UseVisualStyleBackColor = true;
+            this.loadPictureButton.Click += new System.EventHandler(this.loadPictureButton_Click);
             // 
             // pictureLocationTextBox
             // 

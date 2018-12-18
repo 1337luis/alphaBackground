@@ -62,6 +62,7 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInput.cs" />
     <Compile Include="VerticalBackgroundWindow.cs">
       <SubType>Form</SubType>
     </Compile>

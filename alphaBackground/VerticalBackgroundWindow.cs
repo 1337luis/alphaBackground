@@ -13,6 +13,7 @@ namespace alphaBackground
     public partial class VerticalBackgroundWindow : Form
     {
         private Form parent;
+        private Bitmap background, preview, pattern;
         public VerticalBackgroundWindow(Form sender)
         {
             InitializeComponent();
@@ -58,6 +59,20 @@ namespace alphaBackground
         private void VerticalBackgroundWindow_Load(object sender, EventArgs e)
         {
             resolutionComboBox.SelectedIndex = 3;
+        }
+
+        private void colorPanel_Click(object sender, EventArgs e)
+        {
+            colorPanel.BackColor = UserInput.colorInput( colorPanel.BackColor );
+            previewPanel.BackColor = colorPanel.BackColor;
+            resultPictureBox.BackColor = colorPanel.BackColor;
+        }
+
+        private void loadPictureButton_Click(object sender, EventArgs e)
+        {
+            String strUrl = "";
+            pattern = UserInput.imageInput( out strUrl );
+            pictureLocationTextBox.Text = strUrl;
         }
     }
 }

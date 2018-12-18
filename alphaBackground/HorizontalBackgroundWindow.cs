@@ -13,6 +13,7 @@ namespace alphaBackground
     public partial class HorizontalBackgroundWindow : Form
     {
         private Form parent;
+        private Bitmap background, preview, pattern;
         public HorizontalBackgroundWindow(Form sender)
         {
             InitializeComponent();
@@ -39,8 +40,8 @@ namespace alphaBackground
         {
             string[] lang = (
                 Properties.Settings.Default.LANG == "ES" ?
-                Properties.Resources.SpanishCreate.Split(',') :
-                Properties.Resources.EnglishCreate.Split(',')
+                Properties.Resources.SpanishCreate.Split( ',' ) :
+                Properties.Resources.EnglishCreate.Split( ',' )
                 );
             optionsGroupBox.Text = lang[0];
             resolutionGroupBox.Text = lang[1];
@@ -59,6 +60,25 @@ namespace alphaBackground
             previewGroupBox.Text = lang[12];
             resultGroupBox.Text = lang[13];
             saveButton.Text = lang[14];
+        }
+
+        private void deleteBackgroundButton_Click(object sender, EventArgs e)
+        {
+            if ( pattern != null ) Actions.deleteBackground( pattern );
+        }
+
+        private void colorPanel_Click(object sender, EventArgs e)
+        {
+            colorPanel.BackColor = UserInput.colorInput( colorPanel.BackColor );
+            previewPanel.BackColor = colorPanel.BackColor;
+            resultPictureBox.BackColor = colorPanel.BackColor;
+        }
+
+        private void loadPictureButton_Click(object sender, EventArgs e)
+        {
+            String strUrl = "";
+            pattern = UserInput.imageInput( out strUrl );
+            pictureLocationTextBox.Text = strUrl;
         }
     }
 }
