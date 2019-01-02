@@ -37,9 +37,6 @@
             this.percentLabel3 = new System.Windows.Forms.Label();
             this.relativeGapSelector = new System.Windows.Forms.NumericUpDown();
             this.plusLabel = new System.Windows.Forms.Label();
-            this.previewGroupBox = new System.Windows.Forms.GroupBox();
-            this.previewPanel = new System.Windows.Forms.Panel();
-            this.renderButton = new System.Windows.Forms.Button();
             this.horizontalGroupBox = new System.Windows.Forms.GroupBox();
             this.horizontalGapSelector = new System.Windows.Forms.NumericUpDown();
             this.hGapLabel = new System.Windows.Forms.Label();
@@ -60,12 +57,15 @@
             this.pictureLocationTextBox = new System.Windows.Forms.TextBox();
             this.resolutionGroupBox = new System.Windows.Forms.GroupBox();
             this.resolutionComboBox = new System.Windows.Forms.ComboBox();
+            this.patternSizeGroupBox = new System.Windows.Forms.GroupBox();
+            this.patternSizeSelector = new System.Windows.Forms.NumericUpDown();
+            this.pSizeLabel = new System.Windows.Forms.Label();
+            this.percentLabel4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).BeginInit();
             this.resultGroupBox.SuspendLayout();
             this.optionsGroupBox.SuspendLayout();
             this.relativeGapGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.relativeGapSelector)).BeginInit();
-            this.previewGroupBox.SuspendLayout();
             this.horizontalGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalGapSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalCountSelector)).BeginInit();
@@ -75,6 +75,8 @@
             this.colorGroupBox.SuspendLayout();
             this.pictureGroupBox.SuspendLayout();
             this.resolutionGroupBox.SuspendLayout();
+            this.patternSizeGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patternSizeSelector)).BeginInit();
             this.SuspendLayout();
             // 
             // resultPictureBox
@@ -106,12 +108,12 @@
             this.saveButton.TabIndex = 1;
             this.saveButton.Text = "Guardar";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // optionsGroupBox
             // 
+            this.optionsGroupBox.Controls.Add(this.patternSizeGroupBox);
             this.optionsGroupBox.Controls.Add(this.relativeGapGroupBox);
-            this.optionsGroupBox.Controls.Add(this.previewGroupBox);
-            this.optionsGroupBox.Controls.Add(this.renderButton);
             this.optionsGroupBox.Controls.Add(this.horizontalGroupBox);
             this.optionsGroupBox.Controls.Add(this.verticalGroupBox);
             this.optionsGroupBox.Controls.Add(this.colorGroupBox);
@@ -129,9 +131,9 @@
             this.relativeGapGroupBox.Controls.Add(this.percentLabel3);
             this.relativeGapGroupBox.Controls.Add(this.relativeGapSelector);
             this.relativeGapGroupBox.Controls.Add(this.plusLabel);
-            this.relativeGapGroupBox.Location = new System.Drawing.Point(6, 422);
+            this.relativeGapGroupBox.Location = new System.Drawing.Point(6, 485);
             this.relativeGapGroupBox.Name = "relativeGapGroupBox";
-            this.relativeGapGroupBox.Size = new System.Drawing.Size(174, 46);
+            this.relativeGapGroupBox.Size = new System.Drawing.Size(265, 46);
             this.relativeGapGroupBox.TabIndex = 2;
             this.relativeGapGroupBox.TabStop = false;
             this.relativeGapGroupBox.Text = "Separación Relativa";
@@ -140,7 +142,7 @@
             // 
             this.percentLabel3.AutoSize = true;
             this.percentLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.percentLabel3.Location = new System.Drawing.Point(122, 18);
+            this.percentLabel3.Location = new System.Drawing.Point(167, 18);
             this.percentLabel3.Name = "percentLabel3";
             this.percentLabel3.Size = new System.Drawing.Size(18, 15);
             this.percentLabel3.TabIndex = 3;
@@ -148,56 +150,32 @@
             // 
             // relativeGapSelector
             // 
-            this.relativeGapSelector.Location = new System.Drawing.Point(50, 16);
+            this.relativeGapSelector.Location = new System.Drawing.Point(95, 16);
+            this.relativeGapSelector.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.relativeGapSelector.Name = "relativeGapSelector";
             this.relativeGapSelector.Size = new System.Drawing.Size(70, 20);
             this.relativeGapSelector.TabIndex = 2;
             this.relativeGapSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.relativeGapSelector.Value = new decimal(new int[] {
-            20,
+            3,
             0,
             0,
-            0});
+            -2147483648});
+            this.relativeGapSelector.ValueChanged += new System.EventHandler(this.relativeGapSelector_ValueChanged);
             // 
             // plusLabel
             // 
             this.plusLabel.AutoSize = true;
             this.plusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.plusLabel.Location = new System.Drawing.Point(34, 19);
+            this.plusLabel.Location = new System.Drawing.Point(79, 19);
             this.plusLabel.Name = "plusLabel";
             this.plusLabel.Size = new System.Drawing.Size(14, 15);
             this.plusLabel.TabIndex = 0;
             this.plusLabel.Text = "+";
-            // 
-            // previewGroupBox
-            // 
-            this.previewGroupBox.Controls.Add(this.previewPanel);
-            this.previewGroupBox.Location = new System.Drawing.Point(186, 422);
-            this.previewGroupBox.Name = "previewGroupBox";
-            this.previewGroupBox.Size = new System.Drawing.Size(85, 109);
-            this.previewGroupBox.TabIndex = 4;
-            this.previewGroupBox.TabStop = false;
-            this.previewGroupBox.Text = "Vista Previa";
-            // 
-            // previewPanel
-            // 
-            this.previewPanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.previewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.previewPanel.Location = new System.Drawing.Point(18, 18);
-            this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(48, 85);
-            this.previewPanel.TabIndex = 2;
-            // 
-            // renderButton
-            // 
-            this.renderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.renderButton.Location = new System.Drawing.Point(6, 474);
-            this.renderButton.Name = "renderButton";
-            this.renderButton.Size = new System.Drawing.Size(174, 57);
-            this.renderButton.TabIndex = 2;
-            this.renderButton.Text = "Generar";
-            this.renderButton.UseVisualStyleBackColor = true;
-            this.renderButton.Click += new System.EventHandler(this.renderButton_Click);
             // 
             // horizontalGroupBox
             // 
@@ -206,7 +184,7 @@
             this.horizontalGroupBox.Controls.Add(this.percentLabel2);
             this.horizontalGroupBox.Controls.Add(this.horizontalCountSelector);
             this.horizontalGroupBox.Controls.Add(this.hqLabel);
-            this.horizontalGroupBox.Location = new System.Drawing.Point(6, 335);
+            this.horizontalGroupBox.Location = new System.Drawing.Point(6, 399);
             this.horizontalGroupBox.Name = "horizontalGroupBox";
             this.horizontalGroupBox.Size = new System.Drawing.Size(265, 80);
             this.horizontalGroupBox.TabIndex = 3;
@@ -220,6 +198,12 @@
             this.horizontalGapSelector.Size = new System.Drawing.Size(135, 20);
             this.horizontalGapSelector.TabIndex = 9;
             this.horizontalGapSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.horizontalGapSelector.Value = new decimal(new int[] {
+            95,
+            0,
+            0,
+            0});
+            this.horizontalGapSelector.ValueChanged += new System.EventHandler(this.horizontalGapSelector_ValueChanged);
             // 
             // hGapLabel
             // 
@@ -247,6 +231,12 @@
             this.horizontalCountSelector.Size = new System.Drawing.Size(159, 20);
             this.horizontalCountSelector.TabIndex = 6;
             this.horizontalCountSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.horizontalCountSelector.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.horizontalCountSelector.ValueChanged += new System.EventHandler(this.horizontalCountSelector_ValueChanged);
             // 
             // hqLabel
             // 
@@ -264,7 +254,7 @@
             this.verticalGroupBox.Controls.Add(this.percentLabel1);
             this.verticalGroupBox.Controls.Add(this.verticalCountSelector);
             this.verticalGroupBox.Controls.Add(this.vqLabel);
-            this.verticalGroupBox.Location = new System.Drawing.Point(6, 249);
+            this.verticalGroupBox.Location = new System.Drawing.Point(6, 313);
             this.verticalGroupBox.Name = "verticalGroupBox";
             this.verticalGroupBox.Size = new System.Drawing.Size(265, 80);
             this.verticalGroupBox.TabIndex = 2;
@@ -278,6 +268,12 @@
             this.verticalGapSelector.Size = new System.Drawing.Size(135, 20);
             this.verticalGapSelector.TabIndex = 4;
             this.verticalGapSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verticalGapSelector.Value = new decimal(new int[] {
+            55,
+            0,
+            0,
+            0});
+            this.verticalGapSelector.ValueChanged += new System.EventHandler(this.verticalGapSelector_ValueChanged);
             // 
             // vGapLabel
             // 
@@ -305,6 +301,12 @@
             this.verticalCountSelector.Size = new System.Drawing.Size(159, 20);
             this.verticalCountSelector.TabIndex = 2;
             this.verticalCountSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.verticalCountSelector.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.verticalCountSelector.ValueChanged += new System.EventHandler(this.verticalCountSelector_ValueChanged);
             // 
             // vqLabel
             // 
@@ -318,9 +320,9 @@
             // colorGroupBox
             // 
             this.colorGroupBox.Controls.Add(this.colorPanel);
-            this.colorGroupBox.Location = new System.Drawing.Point(6, 187);
+            this.colorGroupBox.Location = new System.Drawing.Point(6, 250);
             this.colorGroupBox.Name = "colorGroupBox";
-            this.colorGroupBox.Size = new System.Drawing.Size(265, 56);
+            this.colorGroupBox.Size = new System.Drawing.Size(265, 57);
             this.colorGroupBox.TabIndex = 2;
             this.colorGroupBox.TabStop = false;
             this.colorGroupBox.Text = "Color";
@@ -331,9 +333,10 @@
             this.colorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.colorPanel.Location = new System.Drawing.Point(6, 19);
             this.colorPanel.Name = "colorPanel";
-            this.colorPanel.Size = new System.Drawing.Size(253, 27);
+            this.colorPanel.Size = new System.Drawing.Size(253, 29);
             this.colorPanel.TabIndex = 3;
             this.colorPanel.Click += new System.EventHandler(this.colorPanel_Click);
+            this.colorPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.colorPanel_Paint);
             // 
             // pictureGroupBox
             // 
@@ -342,19 +345,20 @@
             this.pictureGroupBox.Controls.Add(this.pictureLocationTextBox);
             this.pictureGroupBox.Location = new System.Drawing.Point(6, 76);
             this.pictureGroupBox.Name = "pictureGroupBox";
-            this.pictureGroupBox.Size = new System.Drawing.Size(265, 105);
+            this.pictureGroupBox.Size = new System.Drawing.Size(265, 102);
             this.pictureGroupBox.TabIndex = 4;
             this.pictureGroupBox.TabStop = false;
             this.pictureGroupBox.Text = "Imagen";
             // 
             // deleteBackgroundButton
             // 
-            this.deleteBackgroundButton.Location = new System.Drawing.Point(6, 74);
+            this.deleteBackgroundButton.Location = new System.Drawing.Point(12, 74);
             this.deleteBackgroundButton.Name = "deleteBackgroundButton";
-            this.deleteBackgroundButton.Size = new System.Drawing.Size(253, 23);
+            this.deleteBackgroundButton.Size = new System.Drawing.Size(253, 24);
             this.deleteBackgroundButton.TabIndex = 4;
             this.deleteBackgroundButton.Text = "Eliminar Fondo Blanco";
             this.deleteBackgroundButton.UseVisualStyleBackColor = true;
+            this.deleteBackgroundButton.Click += new System.EventHandler(this.deleteBackgroundButton_Click);
             // 
             // loadPictureButton
             // 
@@ -402,6 +406,52 @@
             this.resolutionComboBox.Name = "resolutionComboBox";
             this.resolutionComboBox.Size = new System.Drawing.Size(253, 21);
             this.resolutionComboBox.TabIndex = 1;
+            this.resolutionComboBox.SelectedIndexChanged += new System.EventHandler(this.resolutionComboBox_SelectedIndexChanged);
+            // 
+            // patternSizeGroupBox
+            // 
+            this.patternSizeGroupBox.Controls.Add(this.patternSizeSelector);
+            this.patternSizeGroupBox.Controls.Add(this.pSizeLabel);
+            this.patternSizeGroupBox.Controls.Add(this.percentLabel4);
+            this.patternSizeGroupBox.Location = new System.Drawing.Point(6, 184);
+            this.patternSizeGroupBox.Name = "patternSizeGroupBox";
+            this.patternSizeGroupBox.Size = new System.Drawing.Size(265, 60);
+            this.patternSizeGroupBox.TabIndex = 2;
+            this.patternSizeGroupBox.TabStop = false;
+            this.patternSizeGroupBox.Text = "Tamaño patrón";
+            // 
+            // patternSizeSelector
+            // 
+            this.patternSizeSelector.Location = new System.Drawing.Point(71, 19);
+            this.patternSizeSelector.Name = "patternSizeSelector";
+            this.patternSizeSelector.Size = new System.Drawing.Size(135, 20);
+            this.patternSizeSelector.TabIndex = 7;
+            this.patternSizeSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.patternSizeSelector.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.patternSizeSelector.ValueChanged += new System.EventHandler(this.patternSizeSelector_ValueChanged);
+            // 
+            // pSizeLabel
+            // 
+            this.pSizeLabel.AutoSize = true;
+            this.pSizeLabel.Location = new System.Drawing.Point(16, 22);
+            this.pSizeLabel.Name = "pSizeLabel";
+            this.pSizeLabel.Size = new System.Drawing.Size(49, 13);
+            this.pSizeLabel.TabIndex = 8;
+            this.pSizeLabel.Text = "Tamaño:";
+            // 
+            // percentLabel4
+            // 
+            this.percentLabel4.AutoSize = true;
+            this.percentLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentLabel4.Location = new System.Drawing.Point(217, 22);
+            this.percentLabel4.Name = "percentLabel4";
+            this.percentLabel4.Size = new System.Drawing.Size(18, 15);
+            this.percentLabel4.TabIndex = 6;
+            this.percentLabel4.Text = "%";
             // 
             // VerticalBackgroundWindow
             // 
@@ -423,7 +473,6 @@
             this.relativeGapGroupBox.ResumeLayout(false);
             this.relativeGapGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.relativeGapSelector)).EndInit();
-            this.previewGroupBox.ResumeLayout(false);
             this.horizontalGroupBox.ResumeLayout(false);
             this.horizontalGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalGapSelector)).EndInit();
@@ -436,6 +485,9 @@
             this.pictureGroupBox.ResumeLayout(false);
             this.pictureGroupBox.PerformLayout();
             this.resolutionGroupBox.ResumeLayout(false);
+            this.patternSizeGroupBox.ResumeLayout(false);
+            this.patternSizeGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patternSizeSelector)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,8 +507,6 @@
         private System.Windows.Forms.GroupBox verticalGroupBox;
         private System.Windows.Forms.GroupBox colorGroupBox;
         private System.Windows.Forms.Panel colorPanel;
-        private System.Windows.Forms.GroupBox previewGroupBox;
-        private System.Windows.Forms.Button renderButton;
         private System.Windows.Forms.Button deleteBackgroundButton;
         private System.Windows.Forms.NumericUpDown verticalGapSelector;
         private System.Windows.Forms.Label vGapLabel;
@@ -468,11 +518,14 @@
         private System.Windows.Forms.Label percentLabel2;
         private System.Windows.Forms.NumericUpDown horizontalCountSelector;
         private System.Windows.Forms.Label hqLabel;
-        private System.Windows.Forms.Panel previewPanel;
         private System.Windows.Forms.GroupBox relativeGapGroupBox;
         private System.Windows.Forms.Label percentLabel3;
         private System.Windows.Forms.NumericUpDown relativeGapSelector;
         private System.Windows.Forms.Label plusLabel;
+        private System.Windows.Forms.GroupBox patternSizeGroupBox;
+        private System.Windows.Forms.NumericUpDown patternSizeSelector;
+        private System.Windows.Forms.Label pSizeLabel;
+        private System.Windows.Forms.Label percentLabel4;
     }
 }
 

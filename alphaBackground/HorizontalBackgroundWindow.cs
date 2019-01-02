@@ -14,6 +14,7 @@ namespace alphaBackground
     {
         private Form parent;
         private Bitmap background, preview, pattern;
+        private BackgroundParams bParams;
         public HorizontalBackgroundWindow(Form sender)
         {
             InitializeComponent();
@@ -56,8 +57,8 @@ namespace alphaBackground
             hGapLabel.Text = lang[8];
             horizontalGroupBox.Text = lang[9];
             relativeGapGroupBox.Text = lang[10];
-            renderButton.Text = lang[11];
-            previewGroupBox.Text = lang[12];
+            patternSizeGroupBox.Text = lang[ 11 ];
+            pSizeLabel.Text = lang[ 12 ];
             resultGroupBox.Text = lang[13];
             saveButton.Text = lang[14];
         }
@@ -70,7 +71,6 @@ namespace alphaBackground
         private void colorPanel_Click(object sender, EventArgs e)
         {
             colorPanel.BackColor = UserInput.colorInput( colorPanel.BackColor );
-            previewPanel.BackColor = colorPanel.BackColor;
             resultPictureBox.BackColor = colorPanel.BackColor;
         }
 

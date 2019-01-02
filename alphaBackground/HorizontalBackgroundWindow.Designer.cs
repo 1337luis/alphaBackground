@@ -54,12 +54,13 @@
             this.pictureLocationTextBox = new System.Windows.Forms.TextBox();
             this.resolutionGroupBox = new System.Windows.Forms.GroupBox();
             this.resolutionComboBox = new System.Windows.Forms.ComboBox();
-            this.previewGroupBox = new System.Windows.Forms.GroupBox();
-            this.previewPanel = new System.Windows.Forms.Panel();
-            this.renderButton = new System.Windows.Forms.Button();
             this.resultGroupBox = new System.Windows.Forms.GroupBox();
             this.saveButton = new System.Windows.Forms.Button();
             this.resultPictureBox = new System.Windows.Forms.PictureBox();
+            this.patternSizeGroupBox = new System.Windows.Forms.GroupBox();
+            this.patternSizeSelector = new System.Windows.Forms.NumericUpDown();
+            this.pSizeLabel = new System.Windows.Forms.Label();
+            this.percentLabel4 = new System.Windows.Forms.Label();
             this.optionsGroupBox.SuspendLayout();
             this.relativeGapGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.relativeGapSelector)).BeginInit();
@@ -72,9 +73,10 @@
             this.colorGroupBox.SuspendLayout();
             this.pictureGroupBox.SuspendLayout();
             this.resolutionGroupBox.SuspendLayout();
-            this.previewGroupBox.SuspendLayout();
             this.resultGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).BeginInit();
+            this.patternSizeGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patternSizeSelector)).BeginInit();
             this.SuspendLayout();
             // 
             // optionsGroupBox
@@ -367,52 +369,24 @@
             this.resolutionComboBox.Size = new System.Drawing.Size(253, 21);
             this.resolutionComboBox.TabIndex = 1;
             // 
-            // previewGroupBox
-            // 
-            this.previewGroupBox.Controls.Add(this.previewPanel);
-            this.previewGroupBox.Location = new System.Drawing.Point(295, 410);
-            this.previewGroupBox.Name = "previewGroupBox";
-            this.previewGroupBox.Size = new System.Drawing.Size(130, 77);
-            this.previewGroupBox.TabIndex = 4;
-            this.previewGroupBox.TabStop = false;
-            this.previewGroupBox.Text = "Vista Previa";
-            // 
-            // previewPanel
-            // 
-            this.previewPanel.BackColor = System.Drawing.Color.DarkCyan;
-            this.previewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.previewPanel.Location = new System.Drawing.Point(18, 18);
-            this.previewPanel.Name = "previewPanel";
-            this.previewPanel.Size = new System.Drawing.Size(85, 48);
-            this.previewPanel.TabIndex = 2;
-            // 
-            // renderButton
-            // 
-            this.renderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.renderButton.Location = new System.Drawing.Point(431, 410);
-            this.renderButton.Name = "renderButton";
-            this.renderButton.Size = new System.Drawing.Size(357, 77);
-            this.renderButton.TabIndex = 2;
-            this.renderButton.Text = "Generar";
-            this.renderButton.UseVisualStyleBackColor = true;
-            this.renderButton.Click += new System.EventHandler(this.renderButton_Click);
-            // 
             // resultGroupBox
             // 
+            this.resultGroupBox.Controls.Add(this.patternSizeGroupBox);
             this.resultGroupBox.Controls.Add(this.saveButton);
             this.resultGroupBox.Controls.Add(this.resultPictureBox);
             this.resultGroupBox.Location = new System.Drawing.Point(295, 12);
             this.resultGroupBox.Name = "resultGroupBox";
-            this.resultGroupBox.Size = new System.Drawing.Size(493, 396);
+            this.resultGroupBox.Size = new System.Drawing.Size(493, 475);
             this.resultGroupBox.TabIndex = 3;
             this.resultGroupBox.TabStop = false;
             this.resultGroupBox.Text = "Resultado";
             // 
             // saveButton
             // 
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.25F);
             this.saveButton.Location = new System.Drawing.Point(6, 19);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(480, 95);
+            this.saveButton.Size = new System.Drawing.Size(480, 51);
             this.saveButton.TabIndex = 1;
             this.saveButton.Text = "Guardar";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -421,11 +395,50 @@
             // 
             this.resultPictureBox.BackColor = System.Drawing.Color.DarkCyan;
             this.resultPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.resultPictureBox.Location = new System.Drawing.Point(6, 120);
+            this.resultPictureBox.Location = new System.Drawing.Point(7, 76);
             this.resultPictureBox.Name = "resultPictureBox";
             this.resultPictureBox.Size = new System.Drawing.Size(480, 270);
             this.resultPictureBox.TabIndex = 0;
             this.resultPictureBox.TabStop = false;
+            // 
+            // patternSizeGroupBox
+            // 
+            this.patternSizeGroupBox.Controls.Add(this.patternSizeSelector);
+            this.patternSizeGroupBox.Controls.Add(this.pSizeLabel);
+            this.patternSizeGroupBox.Controls.Add(this.percentLabel4);
+            this.patternSizeGroupBox.Location = new System.Drawing.Point(7, 354);
+            this.patternSizeGroupBox.Name = "patternSizeGroupBox";
+            this.patternSizeGroupBox.Size = new System.Drawing.Size(479, 115);
+            this.patternSizeGroupBox.TabIndex = 3;
+            this.patternSizeGroupBox.TabStop = false;
+            this.patternSizeGroupBox.Text = "Tamaño patrón";
+            // 
+            // patternSizeSelector
+            // 
+            this.patternSizeSelector.Location = new System.Drawing.Point(71, 19);
+            this.patternSizeSelector.Name = "patternSizeSelector";
+            this.patternSizeSelector.Size = new System.Drawing.Size(135, 20);
+            this.patternSizeSelector.TabIndex = 7;
+            this.patternSizeSelector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pSizeLabel
+            // 
+            this.pSizeLabel.AutoSize = true;
+            this.pSizeLabel.Location = new System.Drawing.Point(16, 22);
+            this.pSizeLabel.Name = "pSizeLabel";
+            this.pSizeLabel.Size = new System.Drawing.Size(49, 13);
+            this.pSizeLabel.TabIndex = 8;
+            this.pSizeLabel.Text = "Tamaño:";
+            // 
+            // percentLabel4
+            // 
+            this.percentLabel4.AutoSize = true;
+            this.percentLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentLabel4.Location = new System.Drawing.Point(212, 21);
+            this.percentLabel4.Name = "percentLabel4";
+            this.percentLabel4.Size = new System.Drawing.Size(18, 15);
+            this.percentLabel4.TabIndex = 6;
+            this.percentLabel4.Text = "%";
             // 
             // HorizontalBackgroundWindow
             // 
@@ -433,8 +446,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 490);
             this.Controls.Add(this.optionsGroupBox);
-            this.Controls.Add(this.renderButton);
-            this.Controls.Add(this.previewGroupBox);
             this.Controls.Add(this.resultGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -459,9 +470,11 @@
             this.pictureGroupBox.ResumeLayout(false);
             this.pictureGroupBox.PerformLayout();
             this.resolutionGroupBox.ResumeLayout(false);
-            this.previewGroupBox.ResumeLayout(false);
             this.resultGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.resultPictureBox)).EndInit();
+            this.patternSizeGroupBox.ResumeLayout(false);
+            this.patternSizeGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patternSizeSelector)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,9 +486,6 @@
         private System.Windows.Forms.Label percentLabel3;
         private System.Windows.Forms.NumericUpDown relativeGapSelector;
         private System.Windows.Forms.Label plusLabel;
-        private System.Windows.Forms.GroupBox previewGroupBox;
-        private System.Windows.Forms.Panel previewPanel;
-        private System.Windows.Forms.Button renderButton;
         private System.Windows.Forms.GroupBox horizontalGroupBox;
         private System.Windows.Forms.NumericUpDown horizontalGapSelector;
         private System.Windows.Forms.Label hGapLabel;
@@ -499,5 +509,9 @@
         private System.Windows.Forms.GroupBox resultGroupBox;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.PictureBox resultPictureBox;
+        private System.Windows.Forms.GroupBox patternSizeGroupBox;
+        private System.Windows.Forms.NumericUpDown patternSizeSelector;
+        private System.Windows.Forms.Label pSizeLabel;
+        private System.Windows.Forms.Label percentLabel4;
     }
 }

@@ -61,7 +61,7 @@ namespace alphaBackground.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Options,Resolution,Picture,Load,Delete White Background,Color,Vertical Repetition,Times,Gap,Horizontal Repetition,Relative Gap,Render,Preview,Result,Save.
+        ///   Busca una cadena traducida similar a Options,Resolution,Picture,Load,Delete White Background,Color,Vertical Repetition,Times,Gap,Horizontal Repetition,Relative Gap,Pattern Size,Size,Result,Save.
         /// </summary>
         internal static string EnglishCreate {
             get {
@@ -79,7 +79,7 @@ namespace alphaBackground.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Opciones,Resolución,Imagen,Cargar,Eliminar Fondo Blanco,Color,Repetición Vertical,Cantidad,Separación,Repetición Horizontal,Separación Relativa,Generar,Vista Previa,Resultado,Guardar.
+        ///   Busca una cadena traducida similar a Opciones,Resolución,Imagen,Cargar,Eliminar Fondo Blanco,Color,Repetición Vertical,Cantidad,Separación,Repetición Horizontal,Separación Relativa,Tamaño del patrón,Tamaño,Resultado,Guardar.
         /// </summary>
         internal static string SpanishCreate {
             get {
